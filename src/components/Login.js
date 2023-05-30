@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  var [arr, setArr] = useState(JSON.parse(localStorage.getItem("SignUp")));
+  var [arr, setArr] = useState();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
+  
+  useEffect(()=>{
+    setArr(JSON.parse(localStorage.getItem("SignUp")))
+  },[])
   function handleLogin(e) {
     e.preventDefault();
     const user = arr.find((user) => user.Name === name && user.Password === password);
