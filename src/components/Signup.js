@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import fireDb from "./Fire";
 
 export default function Signup() {
-  const [arr, setArr] = useState();
+  const [arr, setArr] = useState({});
   const [obj, setObj] = useState({
     Name: "",
     Contact: "",
@@ -39,14 +39,14 @@ export default function Signup() {
       });
     }
 
-    return ()=>{
+    return () => {
       setObj({
         Name: "",
         Contact: "",
         Email: "",
         Password: "",
       });
-    }
+    };
   }, [id, arr]);
 
   function handleInputChange(e) {
@@ -63,21 +63,37 @@ export default function Signup() {
     ) {
       alert("Please enter the all the value first");
       return;
-    }
-
-    fireDb.child("Data").push(obj, (err) => {
-      if (err) {
-        alert(err);
+    } else {
+      if (!id) {
+        fireDb.child("Data").push(obj, (err) => {
+          if (err) {
+            alert(err);
+          } else {
+            alert("Save");
+            setObj({
+              Name: "",
+              Contact: "",
+              Password: "",
+              Email: "",
+            });
+          }
+        });
       } else {
-        alert("Save");
-        setObj({
-          Name: "",
-          Contact: "",
-          Password: "",
-          Email: "",
+        fireDb.child(`Data/${id}`).set(obj, (err) => {
+          if (err) {
+            alert(err);
+          } else {
+            alert("Update");
+            setObj({
+              Name: "",
+              Contact: "",
+              Password: "",
+              Email: "",
+            });
+          }
         });
       }
-    });
+    }
   }
 
   return (
@@ -86,7 +102,7 @@ export default function Signup() {
         <div className="register">
           <form className="register-form">
             <h3 className="head">
-              SIGN UP<ion-icon name="log-in-outline"></ion-icon>
+            {id ?"Update":"Signup"}<ion-icon name="log-in-outline"></ion-icon>
             </h3>
 
             <div className="username">
@@ -107,7 +123,7 @@ export default function Signup() {
                 <ion-icon name="call"></ion-icon>
               </label>
               <input
-                value={obj.Contact || "" }
+                value={obj.Contact || ""}
                 type="contact"
                 name="Contact"
                 placeholder="Contact"
@@ -142,7 +158,7 @@ export default function Signup() {
             </div>
 
             <button className="btn2" onClick={handleSubmit}>
-              <ion-icon name="log-in-outline"></ion-icon>SignUp
+              <ion-icon name="log-in-outline"></ion-icon>{id ?"Update":"Signup"}
             </button>
             <h6 className="link-to-register">
               Have an Account? <Link to="/login">Login here</Link>
