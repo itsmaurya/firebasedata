@@ -1,73 +1,124 @@
-.body{
-    background-image: url(./BG.jpg);
+.body {
+  background-image: url(./BG.jpg);
 }
-.contain{
-    
-    padding: 5rem 10rem;
+.contain {
+  padding: 5rem 10rem;
+  backdrop-filter: blur(4px);
+  color: #fff;
+}
+.contain h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #05161a;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+table {
+  margin-top: 2rem;
+  margin-left: 8rem;
+  border: #05161a solid 1px;
+  border-radius: 1rem;
+  color: #072e33;
+}
+.operation {
+  width: 20rem;
+}
+th {
+  border: #05161a solid 1px;
+  text-align: center;
+  width: 11rem;
+}
+td {
+  text-align: center;
+  border: #05161a solid 1px;
+}
+
+.contain button {
+  width: 5.5rem;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: rgb(1, 1, 56);
+  border: none;
+}
+.contain button:hover {
+  color: rgb(1, 1, 56);
+  background-color: rgb(255, 238, 6);
+  border: none;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  align-items: center;
+}
+.home .homeBtn {
+  width: auto;
+  padding: 0.6rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(1, 1, 56);
+  background-color: #fff;
+  border: none;
+}
+
+.home .homeBtn:hover {
+  color: rgb(1, 1, 56);
+  background-color: rgb(255, 238, 6);
+  border: none;
+}
+
+@media (max-width: 750px) {
+  .body {
+    background-image: url(./BG.jpg);
+
+    height: 90rem;
+
+    background-size:cover;
+  }
+
+  .contain {
+    padding: 1.2rem 0.1rem;
     backdrop-filter: blur(4px);
     color: #fff;
-}
-.contain h2{
+  }
+  .contain h2 {
     text-align: center;
     margin-bottom: 10px;
     color: #05161a;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-table{
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  table {
     margin-top: 2rem;
-    margin-left: 8rem;
+    margin-left: 1rem;
     border: #05161a solid 1px;
     border-radius: 1rem;
     color: #072e33;
-}
- .operation{
+    font-size: small;
+  }
+  .operation {
     width: 20rem;
-}
-th{
+  }
+  th {
     border: #05161a solid 1px;
     text-align: center;
-    width:11rem;
-}
-td{
+    width: 4rem;
+  }
+  td {
     text-align: center;
     border: #05161a solid 1px;
-}
+  }
 
-.contain button{
-    width: 5.5rem;
-    padding: .3rem;
-    margin: .2rem;
-    border-radius: .5rem;
+  .contain button {
+    width: 3rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border-radius: 0.5rem;
     color: #fff;
     background-color: rgb(1, 1, 56);
     border: none;
-}
-.contain button:hover{
-    
-    color: rgb(1, 1, 56);
-    background-color: rgb(255, 238, 6);
-    border: none;
-}
-.home{
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-    align-items: center;
-}
-.home .homeBtn{
-    width: auto;
-    padding: .6rem;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: rgb(1, 1, 56);
-    background-color: #fff;
-    border: none;
-}
-
-.home .homeBtn:hover{
-    color: rgb(1, 1, 56);
-    background-color: rgb(255, 238, 6);
-    border: none;
-    
+  }
 }
