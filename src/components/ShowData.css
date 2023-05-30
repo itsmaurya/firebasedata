@@ -1,0 +1,70 @@
+.body{
+    background-image: url(./BG.jpg);
+}
+.contain{
+    
+    padding: 5rem 10rem;
+    backdrop-filter: blur(4px);
+    color: #fff;
+}
+.contain h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+table{
+    margin-top: 2rem;
+    margin-left: 8rem;
+    border: #fff solid 1px;
+    border-radius: 1rem;
+}
+ .operation{
+    width: 20rem;
+}
+th{
+    border: #fff solid 1px;
+    text-align: center;
+    width:11rem;
+}
+td{
+    text-align: center;
+    border: #98c2f8 solid 1px;
+}
+
+.contain button{
+    width: 5.5rem;
+    padding: .3rem;
+    margin: .2rem;
+    border-radius: .8rem;
+    color: #fff;
+    background-color: rgb(1, 1, 56);
+    border: none;
+}
+.contain button:hover{
+    
+    color: rgb(1, 1, 56);
+    background-color: rgb(255, 238, 6);
+    border: none;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    align-items: center;
+}
+.home .homeBtn{
+    width: auto;
+    padding: .6rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(1, 1, 56);
+    background-color: #fff;
+    border: none;
+}
+
+.home .homeBtn:hover{
+    color: rgb(1, 1, 56);
+    background-color: rgb(255, 238, 6);
+    border: none;
+    
+}
