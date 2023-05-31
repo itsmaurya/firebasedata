@@ -85,6 +85,7 @@ td {
     color: #fff;
   }
   .contain h2 {
+    font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
     color: #05161a;
@@ -93,19 +94,23 @@ td {
   }
   table {
     margin-top: 2rem;
-    margin-left: 1rem;
+    margin-left: .8rem;
     border: #05161a solid 1px;
     border-radius: 1rem;
     color: #072e33;
-    font-size: small;
+    font-size: 10px;
+  }
+  .serialN{
+    width: 1rem;
   }
   .operation {
-    width: 20rem;
+    width: .8rem;
   }
   th {
     border: #05161a solid 1px;
     text-align: center;
     width: 4rem;
+    
   }
   td {
     text-align: center;

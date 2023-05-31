@@ -81,6 +81,24 @@ export default function Login() {
             <h6 className="link-to-register">
               New User? <Link to="/">Register here</Link>
             </h6>
+
+            <div className="foot">
+              <a href="https://github.com/itsmaurya" >
+                <i className="fa fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mauryaavi550"
+                
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/thisis_avimaurya/ "
+                
+              >
+                <i className="fa fa-instagram"></i>
+              </a>
+            </div>
           </form>
         </div>
       </div>

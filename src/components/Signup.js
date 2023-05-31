@@ -102,7 +102,8 @@ export default function Signup() {
         <div className="register">
           <form className="register-form">
             <h3 className="head">
-            {id ?"Update":"Signup"}<ion-icon name="log-in-outline"></ion-icon>
+              {id ? "Update" : "Signup"}
+              <ion-icon name="log-in-outline"></ion-icon>
             </h3>
 
             <div className="username">
@@ -158,11 +159,29 @@ export default function Signup() {
             </div>
 
             <button className="btn2" onClick={handleSubmit}>
-              <ion-icon name="log-in-outline"></ion-icon>{id ?"Update":"Signup"}
+              <ion-icon name="log-in-outline"></ion-icon>
+              {id ? "Update" : "Signup"}
             </button>
             <h6 className="link-to-register">
               Have an Account? <Link to="/login">Login here</Link>
             </h6>
+            <div className="foot">
+              <a href="https://github.com/itsmaurya" >
+                <i className="fa fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mauryaavi550"
+                
+              >
+                <i className="fa fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/thisis_avimaurya/ "
+                
+              >
+                <i className="fa fa-instagram"></i>
+              </a>
+            </div>
           </form>
         </div>
       </div>

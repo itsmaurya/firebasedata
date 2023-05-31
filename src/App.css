@@ -170,6 +170,46 @@ input {
   align-items: start;
 }
 
+.foot{
+  margin: 15px;
+}
+.foot a {
+  padding: 10px 14px;
+  margin: 5px 8px; 
+height: 40px;
+width: 40px;
+border-radius: 40px;
+text-align: center;
+line-height: 40px;
+color: #000;
+font-size: 18px;
+margin-bottom: 15px;
+}
+
+.foot a:nth-child(1){
+  background: #fff;
+}
+.foot a:nth-child(1):hover{
+  color: #fff;
+  background-color: #000;
+}
+.foot a:nth-child(2){
+  background: #0077B5;
+  color: #fff;
+}
+.foot a:nth-child(2):hover{
+  color: #0077B5;
+  background-color: #fff;
+}
+.foot a:nth-child(3){
+  background: #E1306C; 
+}
+.foot a:nth-child(3):hover{
+  color: #E1306C; 
+  background-color: #fff;
+}
+
+
 @media( max-width : 750px) {
 
   /* Login Page CSS */
@@ -194,7 +234,7 @@ input {
   /* background-color: #011a36; */
   backdrop-filter: blur(3px);
 
-  height: 400px;
+  height: 550px;
   width: 300px;
   border-radius: 15px;
   margin-left: 1rem;
@@ -204,11 +244,11 @@ input {
 }
 .login .head {
   color: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .login label {
-  margin: 15px;
+  margin: 10px;
   color: #ffffff;
 }
 
@@ -258,7 +298,7 @@ input {
   font-family: "poppins", sans-serif;
   color: #ffffff;
   font-size: 1.7em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .register-form {
@@ -269,7 +309,7 @@ input {
   /* background-color: #011a36; */
   backdrop-filter: blur(3px);
   border-radius: 15px;
-  height: 500px;
+  height: 550px;
   width: 300px;
   margin-left: 1rem;
 }

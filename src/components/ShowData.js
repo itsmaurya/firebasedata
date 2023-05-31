@@ -52,7 +52,7 @@ export const ShowData = () => {
         <table border="3">
           <thead>
             <tr>
-              <th>Serial No.</th>
+              <th className="serialN">Serial No.</th>
               <th>Name</th>
               <th>Contact</th>
               <th>Email</th>
