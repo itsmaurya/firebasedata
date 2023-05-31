@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import fireDb from "./Fire";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -10,13 +10,31 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  
+
   useEffect(()=>{
-    setArr(JSON.parse(localStorage.getItem("SignUp")))
+    fireDb.child("Data").on("value",(snapshot)=>{
+      if (snapshot.val() !== null){
+        setArr({...snapshot.val()})
+      }
+      else{
+        setArr({})
+      }
+    })
+    return ()=>{
+      setArr({});
+    }
   },[])
+  
+  // useEffect(()=>{
+  //   setArr(JSON.parse(localStorage.getItem("SignUp")))
+  // },[])
   function handleLogin(e) {
     e.preventDefault();
-    const user = arr.find((user) => user.Name === name && user.Password === password);
+    const user = Object.keys(arr).find((key) => {
+      const userData = arr[key];
+      return userData.Name === name && userData.Password === password;
+    });
+    
     if (user) {
       // setName("")
       // setPassword("")
