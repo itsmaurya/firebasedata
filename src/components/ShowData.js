@@ -8,7 +8,7 @@ export const ShowData = () => {
   const navigate =useNavigate();
   const params = useParams();
   var [arr, setArr] = useState({});
-
+  
   useEffect(()=>{
     fireDb.child("Data").on("value",(snapshot)=>{
       if (snapshot.val() !== null){

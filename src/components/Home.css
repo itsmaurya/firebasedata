@@ -1,0 +1,32 @@
+.body{
+    background-image: url("./BG.jpg");
+    height: 47.3rem;
+    
+    background-size:cover;
+    margin: 0;
+  }
+.home-contain{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+.home-contain .registerbtn{
+    width: 200px;
+    margin: 10px;
+    margin-top: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.home-contain .loginbtn{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}

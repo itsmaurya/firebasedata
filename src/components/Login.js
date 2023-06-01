@@ -79,7 +79,7 @@ export default function Login() {
               Login<ion-icon name="log-in-outline"></ion-icon>
             </button>
             <h6 className="link-to-register">
-              New User? <Link to="/">Register here</Link>
+              New User? <Link to="/signup">Register here</Link>
             </h6>
 
             <div className="foot">
