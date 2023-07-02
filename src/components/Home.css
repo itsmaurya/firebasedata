@@ -6,19 +6,40 @@
     margin: 0;
   }
 .home-contain{
-    display:grid;
+    display:flex;
     align-items: center;
     justify-content: center;
     
 }
+.home-contain .blur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 350px;
+    border: 3px solid rgb(82, 82, 155);
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    height: 300px;
+}
 .home-contain .registerbtn{
     width: 200px;
-    margin: 10px;
-    margin-top: 200px;
-    padding: 10px;
+    margin: 10px;padding: 10px;
+    background-color: #fdc800;
     border-radius: 10px;
     border: none;
     font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.home-contain .registerbtn:hover{
+    width: 200px;
+    margin: 10px;padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #002147;
+    color:#fdc800 ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 .home-contain .loginbtn{
@@ -26,7 +47,19 @@
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
+    background-color: #fdc800;
     border: none;
     font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.home-contain .loginbtn:hover{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #002147;
+    color:#fdc800 ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }

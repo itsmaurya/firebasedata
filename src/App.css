@@ -31,12 +31,12 @@ input {
   justify-content: center;
   align-items: center;
   /* background-color: #011a36; */
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px) brightness(70%);
   border: #05161a solid 1px;
   height: 600px;
   width: 400px;
   border-radius: 15px;
-  margin-left: 38%;
+  margin-left: 35%;
 }
 .Link {
   text-decoration: none;
@@ -90,7 +90,6 @@ input {
 .body{
   background-image: url("./components/BG.jpg");
   height: 47.3rem;
-  
   background-size:cover;
 }
 
@@ -102,7 +101,7 @@ input {
 
 .register .head {
   font-family: "poppins", sans-serif;
-  color: #ffffff;
+  color: #fff;
   font-size: 2em;
   margin-bottom: 50px;
 }
@@ -113,31 +112,38 @@ input {
   justify-content: center;
   align-items: center;
   /* background-color: #011a36; */
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px) brightness(70%);
   border: #05161a solid 1px;
   border-radius: 15px;
-  height: 600px;
-  width: 400px;
-  margin-left: 38%;
+  height: 670px;
+  width: 700px;
+  margin-left: 25%;
 }
-
+.register-form .inputDetails{
+  display: flex;
+  padding-inline: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .register-form label {
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   display: inline-block;
   font-size: 1.5rem;
   padding: 0.5rem 0;
 }
 
 .register-form input {
-  margin: 0.5rem .3rem;
+  margin: 0.7rem .5rem;
   padding: .7rem;
   border: none;
   border-radius: 10px;
 }
 
 .link-to-register {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -164,7 +170,10 @@ input {
   box-shadow: 0 15px 16px 0 rgba(20, 20, 20, 0.34),
     0 17px 50px 0 rgba(17, 17, 17, 0.19);
 }
-
+.date label{
+  font-size: 1rem;
+  font-weight: 500;
+}
 .table {
   justify-content: start;
   align-items: start;

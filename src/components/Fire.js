@@ -4,12 +4,13 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAU4_65IgnZtuMrywyWCQYESqPprZjoV0I",
-  authDomain: "database-bd677.firebaseapp.com",
-  projectId: "database-bd677",
-  storageBucket: "database-bd677.appspot.com",
-  messagingSenderId: "532341151182",
-  appId: "1:532341151182:web:430b847d2a6cf39dc8c79f"
+  apiKey: "AIzaSyAj9XeOVeWNuZvrWN-e15qFnelpiOTTKsc",
+  authDomain: "assignment-9c9f5.firebaseapp.com",
+  databaseURL: "https://assignment-9c9f5-default-rtdb.firebaseio.com",
+  projectId: "assignment-9c9f5",
+  storageBucket: "assignment-9c9f5.appspot.com",
+  messagingSenderId: "749079550356",
+  appId: "1:749079550356:web:4fc31f7a56937c0603d781"
 };
   const fireDb = firebase.initializeApp(firebaseConfig);
   export default fireDb.database().ref();

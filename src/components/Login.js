@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import fireDb from "./Fire";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +14,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    fireDb.child("Data").on("value",(snapshot)=>{
+    fireDb.child("EmplyeeData").on("value",(snapshot)=>{
       if (snapshot.val() !== null){
         setArr({...snapshot.val()})
       }
@@ -41,7 +43,7 @@ export default function Login() {
       navigate(`/data/${e.target.id}`);
     }
     else {
-      alert("Invalid credentials");
+      toast.error('Invalid credentials', { autoClose: 2000 ,position: toast.POSITION.TOP_CENTER})
     }
   }
   return (
@@ -102,6 +104,7 @@ export default function Login() {
           </form>
         </div>
       </div>
+      <ToastContainer  />
     </div>
   );
 }

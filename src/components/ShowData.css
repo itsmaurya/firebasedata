@@ -1,52 +1,161 @@
-.body {
-  background-image: url(./BG.jpg);
-}
+
 .contain {
-  padding: 5rem 10rem;
-  backdrop-filter: blur(4px);
+  padding: 2rem 10rem;
+  backdrop-filter: blur(5px) brightness(80%);
   color: #fff;
 }
 .contain h2 {
   text-align: center;
   margin-bottom: 10px;
+  backdrop-filter: blur(7px) brightness(100%  );
+  font-weight: bold;
   color: #05161a;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-table {
-  margin-top: 2rem;
-  margin-left: 8rem;
-  border: #05161a solid 1px;
-  border-radius: 1rem;
-  color: #072e33;
+.data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
 }
-.operation {
-  width: 20rem;
+.data-box {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  width: 380px;
+
+  height: 190px;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
 }
-th {
-  border: #05161a solid 1px;
-  text-align: center;
-  width: 11rem;
+.data-box:hover,
+.phone:hover,
+.email:hover 
+{
+  background-color: #7da0ca;
+  color: #fff;
 }
-td {
-  text-align: center;
-  border: #05161a solid 1px;
+.data-box:hover .phone,
+.data-box:hover .email,
+.data-box:hover .name {
+  color: #fff;
+}
+.data-box:hover .dlt-btn,
+.data-box:hover .updt-btn{
+  background-color: #fff;
+  color: #021024;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+}
+.phone {
+  color: #6e6e6e;
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 5px;
+  
+  margin-bottom: 0;
 }
 
-.contain button {
+.name {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 7px;
+  margin-top: 1px;
+  color: #002147;
+}
+.email {
+  
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  color: #002147;
+}
+.box-btn {
+  display: flex;
+  
+  margin: 10px;
+  
+}
+.dlt-btn{
+  width: 5.5rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border-radius: 0.2rem;
+  color: #fff;
+  background-color: #294d61;
+  border: none;
+}
+.updt-btn{
   width: 5.5rem;
   padding: 0.3rem;
   margin: 0.2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   color: #fff;
-  background-color: rgb(1, 1, 56);
+  background-color: #52011c;
   border: none;
 }
-.contain button:hover {
-  color: rgb(1, 1, 56);
-  background-color: rgb(255, 238, 6);
-  border: none;
+
+
+.details{
+  
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  margin-bottom: 45px;
+  
 }
+.box {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10rem;
+  width: 996px;
+  height: 251px;
+  background-color: rgb(233, 233, 232);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.box-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  letter-spacing: -1.85px;
+  margin-top:15px ;
+  margin-bottom: 4px;
+}
+.box-phone{
+  margin-top:2px;
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+color: #000;
+}
+.box-email{
+  margin-top: 2px;
+  margin-bottom: 4px;
+  font-style: normal;
+font-weight: 500;
+font-size: 15px;
+color: #000;
+
+}
+
+
 .home {
   display: flex;
   flex-direction: column;

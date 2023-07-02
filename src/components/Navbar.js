@@ -1,67 +1,27 @@
-import React, { useEffect, useState } from "react";
-import "../App.css";
-import { Link } from "react-router-dom";
+import React from 'react'
 
-export default function Navbar() {
-  const [obj, setObj] = useState({
-    Name: "",
-    Address: "",
-    Phone: "",
-  });
-  
-  var [arr, setArr] = useState(JSON.parse(localStorage.getItem("key")));
-
-  function store(e) {
-    setObj({
-      ...obj,
-      [e.target.name]: e.target.value,
-    });
-  }
-
-  function save() {
-        if (arr == null) {
-      arr = [];
-    }
-    setArr([...arr, obj]);
-  }
-  useEffect(() => {
-    localStorage.setItem("key", JSON.stringify(arr));
-
-    setObj({
-      Name: "",
-      Phone: "",
-      Address: "",
-    });
-  }, [arr]);
+import "./Navbar.css"
+import { Link } from 'react-router-dom'
+export const Navbar = () => {
   return (
     <div>
-      <input
-        value={obj.Name}
-        onChange={store}
-        type="text"
-        name="Name"
-        placeholder="name"
-      />
-      <input
-        value={obj.Address}
-        onChange={store}
-        type="text"
-        name="Address"
-        placeholder="address"
-      />
-      <input
-        value={obj.Phone}
-        onChange={store}
-        type="text"
-        name="Phone"
-        placeholder="phone"
-      />
-      <button onClick={save}>Save</button>
-      <br /> <br />
-      <Link to="/data">
-        {" "}
-        <button>Show</button>
-      </Link>
+      <nav className="navbar">
+        <div className="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div className="hamburger-lines">
+            <span className="line line1"></span>
+            <span className="line line2"></span>
+            <span className="line line3"></span>
+          </div>
+          <ul className="menu-items">
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/"><li>Gallery</li></Link>
+            <Link to="/"><li>About Us</li></Link>
+            <Link to='/'><li>Contact Us</li></Link>
+           <Link to='/'> <li>Login</li></Link>
+          </ul>
+        </div>
+      </nav>
     </div>
-  );
+  )
 }
